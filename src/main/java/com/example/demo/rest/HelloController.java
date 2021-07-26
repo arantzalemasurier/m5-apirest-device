@@ -17,12 +17,24 @@ public class HelloController {
 	
 	private final Logger log = LoggerFactory.getLogger(HelloController.class);
 		
-	
 	@GetMapping("/")
 	public String index() {
-		return "API REST is at /api/....";
+		return """
+				<!DOCTYPE html>
+				<html>
+				<head>
+				<meta charset="ISO-8859-1">
+				<title>Awesome API REST</title>
+				</head>
+				<body>
+				<h1 style="color:red;">Bienvenido a la API extraterrestre</h1>
+				<a href="/api/cars">Cars Database</a>
+				
+				</body>
+				</html>
+				""";
 	}
-	
+
 	/**
 	 * http://localhost:8080/api/hello
 	 * @return
